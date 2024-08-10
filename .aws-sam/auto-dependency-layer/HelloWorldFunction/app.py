@@ -45,8 +45,8 @@ def lambda_handler(event, context):
 
     print("Change deployed with SAM Accelerate!!!")
 
-    # if True:
-    #     raise Exception("This will cause a deployment rollback")
+    if True:
+        raise Exception("This will cause a deployment rollback")
 
     return {
         "statusCode": 200,
