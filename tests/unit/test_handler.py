@@ -69,7 +69,7 @@ def test_lambda_handler(apigw_event):
 
     assert ret["statusCode"] == 200
     assert "message" in ret["body"]
-    assert data["message"] == "I'm using canary deployments"
+    assert data["message"] == "Hi... I am Vicky!!!"
 
 # def test_lambda_handler(apigw_event, mocker):
 #     assert True

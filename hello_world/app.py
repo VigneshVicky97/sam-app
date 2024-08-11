@@ -1,57 +1,57 @@
 import json
 
-# import requests
+import requests
 
-
-# def lambda_handler(event, context):
-#     """Sample pure Lambda function
-
-#     Parameters
-#     ----------
-#     event: dict, required
-#         API Gateway Lambda Proxy Input Format
-
-#         Event doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html#api-gateway-simple-proxy-for-lambda-input-format
-
-#     context: object, required
-#         Lambda Context runtime methods and attributes
-
-#         Context doc: https://docs.aws.amazon.com/lambda/latest/dg/python-context-object.html
-
-#     Returns
-#     ------
-#     API Gateway Lambda Proxy Output Format: dict
-
-#         Return doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html
-#     """
-
-#     # try:
-#     #     ip = requests.get("http://checkip.amazonaws.com/")
-#     # except requests.RequestException as e:
-#     #     # Send some context about this error to Lambda Logs
-#     #     print(e)
-
-#     #     raise e
-
-#     return {
-#         "statusCode": 200,
-#         "body": json.dumps({
-#             "message": "I am using canary deployments",
-#             # "location": ip.text.replace("\n", "")
-#         }),
-#     }
 
 def lambda_handler(event, context):
+    """Sample pure Lambda function
 
-    print("Change deployed with SAM Accelerate!!!")
+    Parameters
+    ----------
+    event: dict, required
+        API Gateway Lambda Proxy Input Format
 
-    # if True:
-    #     raise Exception("This will cause a deployment rollback")
+        Event doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html#api-gateway-simple-proxy-for-lambda-input-format
+
+    context: object, required
+        Lambda Context runtime methods and attributes
+
+        Context doc: https://docs.aws.amazon.com/lambda/latest/dg/python-context-object.html
+
+    Returns
+    ------
+    API Gateway Lambda Proxy Output Format: dict
+
+        Return doc: https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html
+    """
+
+    # try:
+    #     ip = requests.get("http://checkip.amazonaws.com/")
+    # except requests.RequestException as e:
+    #     # Send some context about this error to Lambda Logs
+    #     print(e)
+
+    #     raise e
 
     return {
         "statusCode": 200,
         "body": json.dumps({
-            "message": "I'm using canary deployments",
+            "message": "Hi... I am Vicky!!!",
+            # "location": ip.text.replace("\n", "")
         }),
     }
+
+# def lambda_handler(event, context):
+
+#     print("Change deployed with SAM Accelerate!!!")
+
+#     # if True:
+#     #     raise Exception("This will cause a deployment rollback")
+
+#     return {
+#         "statusCode": 200,
+#         "body": json.dumps({
+#             "message": "I'm using canary deployments",
+#         }),
+#     }
 
